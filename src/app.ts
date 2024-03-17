@@ -27,7 +27,7 @@ function getRealInt(
 }
 
 const LOKI_URL = process.env['LOKI_URL'] || 'http://localhost:3100'
-const PROM_URL = process.env['PROM_URL'] || 'http://localhost:9090'
+const PROM_URL = process.env['PROM_URL'] || ''
 const JOB_NAME = process.env['JOB_NAME'] || 'bluesky-firehose'
 const SERVICE = process.env['SERVICE'] || 'wss://bsky.network'
 const NIC = process.env['NIC'] || 'eth0'

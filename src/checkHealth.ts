@@ -27,5 +27,6 @@ export async function checkLokiHealth(url: string): Promise<Boolean> {
 }
 
 export async function checkPromHealth(url: string): Promise<Boolean> {
+  if (url === '') return true
   return await checkHealth(`${url}/-/ready`, 'Prometheus Server is Ready.')
 }
