@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  firehose-to-loki:
+    image: firehose-to-loki
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    ports:
+      - '8080:8080'
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
