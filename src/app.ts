@@ -27,6 +27,8 @@ function getRealInt(
 }
 
 const LOKI_URL = process.env['LOKI_URL'] || 'http://localhost:3100'
+const LOKI_USER = process.env['LOKI_USER'] || ''
+const LOKI_PASS = process.env['LOKI_PASS'] || ''
 const PROM_URL = process.env['PROM_URL'] || ''
 const JOB_NAME = process.env['JOB_NAME'] || 'bluesky-firehose'
 const SERVICE = process.env['SERVICE'] || 'wss://bsky.network'
@@ -76,6 +78,7 @@ const options = {
   transports: [
     new LokiTransport({
       host: LOKI_URL,
+      basicAuth:`${LOKI_USER}:${LOKI_PASS}`,
       timeout: 15000,
       onConnectionError: (e) => {
         logger.error(`loki connection error: ${e}`)
@@ -103,7 +106,7 @@ async function main() {
 
   const health = await healthChecks()
 
-  const initialSeq = await getLastSeq(LOKI_URL, JOB_NAME)
+  const initialSeq = await getLastSeq(LOKI_URL, JOB_NAME, LOKI_USER, LOKI_PASS)
   const firehose = await new FirehoseIterable().create(
     SERVICE,
     initialSeq,

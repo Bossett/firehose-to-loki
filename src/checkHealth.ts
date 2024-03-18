@@ -23,10 +23,18 @@ async function checkHealth(url: string, okString: string): Promise<Boolean> {
 }
 
 export async function checkLokiHealth(url: string): Promise<Boolean> {
+  
+  // grafana.net does not provide a simple host check
+  if ((new URL(url).hostname).endsWith('grafana.net')) return true
+  
   return await checkHealth(`${url}/ready`, 'ready')
 }
 
 export async function checkPromHealth(url: string): Promise<Boolean> {
   if (url === '') return true
+  
+  // grafana.net does not provide a simple host check
+  if ((new URL(url).hostname).endsWith('grafana.net')) return true
+
   return await checkHealth(`${url}/-/ready`, 'Prometheus Server is Ready.')
 }

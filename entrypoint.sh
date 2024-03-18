@@ -23,10 +23,15 @@ until yarn --silent start; do
 
     ps -aux | grep '[n]ode' | awk '{print $2}' | xargs -r kill
 
+if [[ "$LOKI_URL" == *grafana.net* ]]; then
+    # grafana.net does not provide a simple host check
+    echo "LOKI_URL is grafana.net, skipping readiness check."
+else
     while ! curl --output /dev/null --silent --fail "$LOKI_URL/ready"; do
         echo "Unable to reach LOKI_URL: $LOKI_URL/ready. Retrying in $retry_interval seconds..."
         sleep $retry_interval
     done
+fi
 
     last_crash=$(date +%s)
 done
