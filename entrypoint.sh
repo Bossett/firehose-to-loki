@@ -23,7 +23,7 @@ until yarn --silent start; do
 
     ps -aux | grep '[n]ode' | awk '{print $2}' | xargs -r kill
 
-if [[ "$LOKI_URL" == *grafana.net* ]]; then
+if echo "$LOKI_URL" | grep -q "grafana.net"; then
     # grafana.net does not provide a simple host check
     echo "LOKI_URL is grafana.net, skipping readiness check."
 else
