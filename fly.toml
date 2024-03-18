@@ -1,0 +1,35 @@
+# fly.toml app configuration file generated for bsky-firehose-to-loki on 2024-03-19T08:05:15+11:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'bsky-firehose-to-loki'
+primary_region = 'sjc'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[http_service]
+  internal_port = 8080
+
+[env]
+  FIREHOSE_TIMEOUT = '120000'
+  HEALTH_CHECK_PERIOD = '60000'
+  JOB_NAME = 'bluesky-firehose'
+  LOGGING_PERIOD = '300000'
+  LOKI_PASS = ''
+  LOKI_URL = 'https://loki'
+  LOKI_USER = ''
+  METRICS_HOST = '0.0.0.0'
+  METRICS_PERIOD = '2500'
+  METRICS_PORT = '8080'
+  NIC = 'eth0'
+  NODE_OPTIONS = '--no-warnings --max_old_space_size=8192'
+  PROM_URL = ''
+  SEQUENCE_TOLERANCE = '2'
+  SERVICE = 'wss://bsky.network'
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
