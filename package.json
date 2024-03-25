@@ -11,7 +11,7 @@
     "@atproto/lexicon": "^0.3.3",
     "@atproto/repo": "^0.3.9",
     "@atproto/syntax": "^0.2.1",
-    "@atproto/xrpc-server": "^0.4.4",
+    "@atproto/xrpc-server": "^0.5.0",
     "@types/express": "^4.17.17",
     "cbor-x": "^1.5.8",
     "denque": "^2.1.0",

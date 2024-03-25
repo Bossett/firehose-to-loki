@@ -26,6 +26,16 @@
     uint8arrays "3.0.0"
     zod "^3.21.4"
 
+"@atproto/common-web@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@atproto/common-web/-/common-web-0.3.0.tgz#36da8c2c31d8cf8a140c3c8f03223319bf4430bb"
+  integrity sha512-67VnV6JJyX+ZWyjV7xFQMypAgDmjVaR9ZCuU/QW+mqlqI7fex2uL4Fv+7/jHadgzhuJHVd6OHOvNn0wR5WZYtA==
+  dependencies:
+    graphemer "^1.4.0"
+    multiformats "^9.9.0"
+    uint8arrays "3.0.0"
+    zod "^3.21.4"
+
 "@atproto/common@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@atproto/common/-/common-0.3.4.tgz#4af79785ae7998dfb33946ebe6d7aa86b38664ed"
@@ -39,10 +49,31 @@
     pino "^8.15.0"
     zod "3.21.4"
 
+"@atproto/common@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@atproto/common/-/common-0.4.0.tgz#d77696c7eb545426df727837d9ee333b429fe7ef"
+  integrity sha512-yOXuPlCjT/OK9j+neIGYn9wkxx/AlxQSucysAF0xgwu0Ji8jAtKBf9Jv6R5ObYAjAD/kVUvEYumle+Yq/R9/7g==
+  dependencies:
+    "@atproto/common-web" "^0.3.0"
+    "@ipld/dag-cbor" "^7.0.3"
+    cbor-x "^1.5.1"
+    iso-datestring-validator "^2.2.2"
+    multiformats "^9.9.0"
+    pino "^8.15.0"
+
 "@atproto/crypto@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@atproto/crypto/-/crypto-0.3.0.tgz#a79e05a85129810755f3456e9d419b49824407d7"
   integrity sha512-bhcxRTL4fgRY2YX/St0x4o0oDUp18QIPD7ek+7v8UKA0HpsCGQYbo8w9d9hUvwwty5X5p00cYF2tbggUWaPy7A==
+  dependencies:
+    "@noble/curves" "^1.1.0"
+    "@noble/hashes" "^1.3.1"
+    uint8arrays "3.0.0"
+
+"@atproto/crypto@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@atproto/crypto/-/crypto-0.4.0.tgz#dcdd6bf5ba98261ae0ff3b96d7b8695c1ef788e6"
+  integrity sha512-Kj/4VgJ7hzzXvE42L0rjzP6lM0tai+OfPnP1rxJ+UZg/YUDtuewL4uapnVoWXvlNceKgaLZH98g5n9gXBVTe5Q==
   dependencies:
     "@noble/curves" "^1.1.0"
     "@noble/hashes" "^1.3.1"
@@ -64,6 +95,17 @@
   dependencies:
     "@atproto/common-web" "^0.2.4"
     "@atproto/syntax" "^0.2.1"
+    iso-datestring-validator "^2.2.2"
+    multiformats "^9.9.0"
+    zod "^3.21.4"
+
+"@atproto/lexicon@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@atproto/lexicon/-/lexicon-0.4.0.tgz#63e8829945d80c25524882caa8ed27b1151cc576"
+  integrity sha512-RvCBKdSI4M8qWm5uTNz1z3R2yIvIhmOsMuleOj8YR6BwRD+QbtUBy3l+xQ7iXf4M5fdfJFxaUNa6Ty0iRwdKqQ==
+  dependencies:
+    "@atproto/common-web" "^0.3.0"
+    "@atproto/syntax" "^0.3.0"
     iso-datestring-validator "^2.2.2"
     multiformats "^9.9.0"
     zod "^3.21.4"
@@ -92,14 +134,19 @@
   dependencies:
     "@atproto/common-web" "^0.2.4"
 
-"@atproto/xrpc-server@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@atproto/xrpc-server/-/xrpc-server-0.4.4.tgz#758f9a01ae59aedad02a325ec820781d168e6e3b"
-  integrity sha512-R4uYvuia+tUM4wATLlKmMhr/+VEaSImhuAhD7jEHIjN3a+ZxDBE5PnW3PwWf68VBqw720JJ+jmsJMZO7v9y6FA==
+"@atproto/syntax@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@atproto/syntax/-/syntax-0.3.0.tgz#fafa2dbea9add37253005cb663e7373e05e618b3"
+  integrity sha512-Weq0ZBxffGHDXHl9U7BQc2BFJi/e23AL+k+i5+D9hUq/bzT4yjGsrCejkjq0xt82xXDjmhhvQSZ0LqxyZ5woxA==
+
+"@atproto/xrpc-server@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@atproto/xrpc-server/-/xrpc-server-0.5.0.tgz#6d1db4f8d8fac17b0f849a003f3f5ebd35266e0d"
+  integrity sha512-3g9cy6vCWnsEpThGR0mcepp4HiCQxs05L2XCuxZIOP20JcaIViMHFNlIm9lJdNwWXLb7dzSZLYjfA2QOWDZ3Gw==
   dependencies:
-    "@atproto/common" "^0.3.4"
-    "@atproto/crypto" "^0.3.0"
-    "@atproto/lexicon" "^0.3.3"
+    "@atproto/common" "^0.4.0"
+    "@atproto/crypto" "^0.4.0"
+    "@atproto/lexicon" "^0.4.0"
     cbor-x "^1.5.1"
     express "^4.17.2"
     http-errors "^2.0.0"
@@ -117,60 +164,30 @@
     "@atproto/lexicon" "^0.3.3"
     zod "^3.21.4"
 
-"@cbor-extract/cbor-extract-darwin-arm64@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-darwin-arm64/-/cbor-extract-darwin-arm64-2.1.1.tgz#5721f6dd3feae0b96d23122853ce977e0671b7a6"
-  integrity sha512-blVBy5MXz6m36Vx0DfLd7PChOQKEs8lK2bD1WJn/vVgG4FXZiZmZb2GECHFvVPA5T7OnODd9xZiL3nMCv6QUhA==
-
 "@cbor-extract/cbor-extract-darwin-arm64@2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-darwin-arm64/-/cbor-extract-darwin-arm64-2.2.0.tgz#8d65cb861a99622e1b4a268e2d522d2ec6137338"
   integrity sha512-P7swiOAdF7aSi0H+tHtHtr6zrpF3aAq/W9FXx5HektRvLTM2O89xCyXF3pk7pLc7QpaY7AoaE8UowVf9QBdh3w==
-
-"@cbor-extract/cbor-extract-darwin-x64@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-darwin-x64/-/cbor-extract-darwin-x64-2.1.1.tgz#c25e7d0133950d87d101d7b3afafea8d50d83f5f"
-  integrity sha512-h6KFOzqk8jXTvkOftyRIWGrd7sKQzQv2jVdTL9nKSf3D2drCvQB/LHUxAOpPXo3pv2clDtKs3xnHalpEh3rDsw==
 
 "@cbor-extract/cbor-extract-darwin-x64@2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-darwin-x64/-/cbor-extract-darwin-x64-2.2.0.tgz#9fbec199c888c5ec485a1839f4fad0485ab6c40a"
   integrity sha512-1liF6fgowph0JxBbYnAS7ZlqNYLf000Qnj4KjqPNW4GViKrEql2MgZnAsExhY9LSy8dnvA4C0qHEBgPrll0z0w==
 
-"@cbor-extract/cbor-extract-linux-arm64@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-linux-arm64/-/cbor-extract-linux-arm64-2.1.1.tgz#48f78e7d8f0fcc84ed074b6bfa6d15dd83187c63"
-  integrity sha512-SxAaRcYf8S0QHaMc7gvRSiTSr7nUYMqbUdErBEu+HYA4Q6UNydx1VwFE68hGcp1qvxcy9yT5U7gA+a5XikfwSQ==
-
 "@cbor-extract/cbor-extract-linux-arm64@2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-linux-arm64/-/cbor-extract-linux-arm64-2.2.0.tgz#bf77e0db4a1d2200a5aa072e02210d5043e953ae"
   integrity sha512-rQvhNmDuhjTVXSPFLolmQ47/ydGOFXtbR7+wgkSY0bdOxCFept1hvg59uiLPT2fVDuJFuEy16EImo5tE2x3RsQ==
-
-"@cbor-extract/cbor-extract-linux-arm@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-linux-arm/-/cbor-extract-linux-arm-2.1.1.tgz#7507d346389cb682e44fab8fae9534edd52e2e41"
-  integrity sha512-ds0uikdcIGUjPyraV4oJqyVE5gl/qYBpa/Wnh6l6xLE2lj/hwnjT2XcZCChdXwW/YFZ1LUHs6waoYN8PmK0nKQ==
 
 "@cbor-extract/cbor-extract-linux-arm@2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-linux-arm/-/cbor-extract-linux-arm-2.2.0.tgz#491335037eb8533ed8e21b139c59f6df04e39709"
   integrity sha512-QeBcBXk964zOytiedMPQNZr7sg0TNavZeuUCD6ON4vEOU/25+pLhNN6EDIKJ9VLTKaZ7K7EaAriyYQ1NQ05s/Q==
 
-"@cbor-extract/cbor-extract-linux-x64@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-linux-x64/-/cbor-extract-linux-x64-2.1.1.tgz#b7c1d2be61c58ec18d58afbad52411ded63cd4cd"
-  integrity sha512-GVK+8fNIE9lJQHAlhOROYiI0Yd4bAZ4u++C2ZjlkS3YmO6hi+FUxe6Dqm+OKWTcMpL/l71N6CQAmaRcb4zyJuA==
-
 "@cbor-extract/cbor-extract-linux-x64@2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-linux-x64/-/cbor-extract-linux-x64-2.2.0.tgz#672574485ccd24759bf8fb8eab9dbca517d35b97"
   integrity sha512-cWLAWtT3kNLHSvP4RKDzSTX9o0wvQEEAj4SKvhWuOVZxiDAeQazr9A+PSiRILK1VYMLeDml89ohxCnUNQNQNCw==
-
-"@cbor-extract/cbor-extract-win32-x64@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cbor-extract/cbor-extract-win32-x64/-/cbor-extract-win32-x64-2.1.1.tgz#21b11a1a3f18c3e7d62fd5f87438b7ed2c64c1f7"
-  integrity sha512-2Niq1C41dCRIDeD8LddiH+mxGlO7HJ612Ll3D/E73ZWBmycued+8ghTr/Ho3CMOWPUEr08XtyBMVXAjqF+TcKw==
 
 "@cbor-extract/cbor-extract-win32-x64@2.2.0":
   version "2.2.0"
@@ -612,24 +629,6 @@ bintrees@1.0.2:
   resolved "https://registry.yarnpkg.com/bintrees/-/bintrees-1.0.2.tgz#49f896d6e858a4a499df85c38fb399b9aff840f8"
   integrity sha512-VOMgTMwjAaUG580SXn3LacVgjurrbMme7ZZNYGSSV7mmtY6QQRh0Eg3pwIcntQ77DErK1L0NxkbetjcoXzVwKw==
 
-body-parser@1.20.1:
-  version "1.20.1"
-  resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.1.tgz#b1812a8912c195cd371a3ee5e66faa2338a5c668"
-  integrity sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==
-  dependencies:
-    bytes "3.1.2"
-    content-type "~1.0.4"
-    debug "2.6.9"
-    depd "2.0.0"
-    destroy "1.2.0"
-    http-errors "2.0.0"
-    iconv-lite "0.4.24"
-    on-finished "2.4.1"
-    qs "6.11.0"
-    raw-body "2.5.1"
-    type-is "~1.6.18"
-    unpipe "1.0.0"
-
 body-parser@1.20.2:
   version "1.20.2"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.2.tgz#6feb0e21c4724d06de7ff38da36dad4f57a747fd"
@@ -675,20 +674,6 @@ call-bind@^1.0.0:
     get-intrinsic "^1.2.1"
     set-function-length "^1.1.1"
 
-cbor-extract@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/cbor-extract/-/cbor-extract-2.1.1.tgz#f154b31529fdb6b7c70fb3ca448f44eda96a1b42"
-  integrity sha512-1UX977+L+zOJHsp0mWFG13GLwO6ucKgSmSW6JTl8B9GUvACvHeIVpFqhU92299Z6PfD09aTXDell5p+lp1rUFA==
-  dependencies:
-    node-gyp-build-optional-packages "5.0.3"
-  optionalDependencies:
-    "@cbor-extract/cbor-extract-darwin-arm64" "2.1.1"
-    "@cbor-extract/cbor-extract-darwin-x64" "2.1.1"
-    "@cbor-extract/cbor-extract-linux-arm" "2.1.1"
-    "@cbor-extract/cbor-extract-linux-arm64" "2.1.1"
-    "@cbor-extract/cbor-extract-linux-x64" "2.1.1"
-    "@cbor-extract/cbor-extract-win32-x64" "2.1.1"
-
 cbor-extract@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/cbor-extract/-/cbor-extract-2.2.0.tgz#cee78e630cbeae3918d1e2e58e0cebaf3a3be840"
@@ -703,14 +688,7 @@ cbor-extract@^2.2.0:
     "@cbor-extract/cbor-extract-linux-x64" "2.2.0"
     "@cbor-extract/cbor-extract-win32-x64" "2.2.0"
 
-cbor-x@^1.5.1:
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/cbor-x/-/cbor-x-1.5.4.tgz#8f0754fa8589cbd7339b613b2b5717d133508e98"
-  integrity sha512-PVKILDn+Rf6MRhhcyzGXi5eizn1i0i3F8Fe6UMMxXBnWkalq9+C5+VTmlIjAYM4iF2IYF2N+zToqAfYOp+3rfw==
-  optionalDependencies:
-    cbor-extract "^2.1.1"
-
-cbor-x@^1.5.8:
+cbor-x@^1.5.1, cbor-x@^1.5.8:
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/cbor-x/-/cbor-x-1.5.8.tgz#3bd7bc61120692b5031d7f782a39b64f51f1d825"
   integrity sha512-gc3bHBsvG6GClCY6c0/iip+ghlqizkVp+TtaL927lwvP4VP9xBdi1HmqPR5uj/Mj/0TOlngMkIYa25wKg+VNrQ==
@@ -902,44 +880,7 @@ events@^3.3.0:
   resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
   integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
 
-express@^4.17.2:
-  version "4.18.2"
-  resolved "https://registry.yarnpkg.com/express/-/express-4.18.2.tgz#3fabe08296e930c796c19e3c516979386ba9fd59"
-  integrity sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==
-  dependencies:
-    accepts "~1.3.8"
-    array-flatten "1.1.1"
-    body-parser "1.20.1"
-    content-disposition "0.5.4"
-    content-type "~1.0.4"
-    cookie "0.5.0"
-    cookie-signature "1.0.6"
-    debug "2.6.9"
-    depd "2.0.0"
-    encodeurl "~1.0.2"
-    escape-html "~1.0.3"
-    etag "~1.8.1"
-    finalhandler "1.2.0"
-    fresh "0.5.2"
-    http-errors "2.0.0"
-    merge-descriptors "1.0.1"
-    methods "~1.1.2"
-    on-finished "2.4.1"
-    parseurl "~1.3.3"
-    path-to-regexp "0.1.7"
-    proxy-addr "~2.0.7"
-    qs "6.11.0"
-    range-parser "~1.2.1"
-    safe-buffer "5.2.1"
-    send "0.18.0"
-    serve-static "1.15.0"
-    setprototypeof "1.2.0"
-    statuses "2.0.1"
-    type-is "~1.6.18"
-    utils-merge "1.0.1"
-    vary "~1.1.2"
-
-express@^4.18.3:
+express@^4.17.2, express@^4.18.3:
   version "4.18.3"
   resolved "https://registry.yarnpkg.com/express/-/express-4.18.3.tgz#6870746f3ff904dee1819b82e4b51509afffb0d4"
   integrity sha512-6VyCijWQ+9O7WuVMTRBTl+cjNNIzD5cY5mQ1WM8r/LEkI2u8EYpOotESNwzNlyCn3g+dmjKYI6BmNneSr/FSRw==
@@ -1213,11 +1154,6 @@ negotiator@0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-node-gyp-build-optional-packages@5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/node-gyp-build-optional-packages/-/node-gyp-build-optional-packages-5.0.3.tgz#92a89d400352c44ad3975010368072b41ad66c17"
-  integrity sha512-k75jcVzk5wnnc/FMxsf4udAoTEUv2jY3ycfdSd3yWu6Cnd1oee6/CfZJApyscA4FJOmdoixWwiwOyf16RzD5JA==
-
 node-gyp-build-optional-packages@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/node-gyp-build-optional-packages/-/node-gyp-build-optional-packages-5.1.1.tgz#52b143b9dd77b7669073cbfe39e3f4118bfc603c"
@@ -1359,16 +1295,6 @@ rate-limiter-flexible@^2.4.1:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/rate-limiter-flexible/-/rate-limiter-flexible-2.4.2.tgz#2a219cc473f015142fd8fb599371223d730decbd"
   integrity sha512-rMATGGOdO1suFyf/mI5LYhts71g1sbdhmd6YvdiXO2gJnd42Tt6QS4JUKJKSWVVkMtBacm6l40FR7Trjo6Iruw==
-
-raw-body@2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.5.1.tgz#fe1b1628b181b700215e5fd42389f98b71392857"
-  integrity sha512-qqJBtEyVgS0ZmPGdCFPWJ3FreoqvG4MVQln/kCgF7Olq95IbOp0/BWyMwbdtn4VTvkM8Y7khCQ2Xgk/tcrCXig==
-  dependencies:
-    bytes "3.1.2"
-    http-errors "2.0.0"
-    iconv-lite "0.4.24"
-    unpipe "1.0.0"
 
 raw-body@2.5.2:
   version "2.5.2"
